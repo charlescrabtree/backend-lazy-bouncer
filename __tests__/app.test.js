@@ -60,11 +60,11 @@ describe('lazy-bouncer routes', () => {
     });
   });
 
-  it.skip('should return a 401 when signed out and listing all users', async () => {
+  it('should return a 401 when signed out and listing all users', async () => {
     const res = await request(app).get('/api/v1/users');
 
     expect(res.body).toEqual({
-      message: 'You must be signed in to continue',
+      message: 'You no sign in! You musta sign in! Santo cielo, questi americani',
       status: 401,
     });
   });
